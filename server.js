@@ -29,7 +29,7 @@ app.use(express.static("public"));
 
 // Connect to the Mongo DB
 mongoose
-.connect("mongodb://heroku_wgm3zdxc:j7fhgljrj8e6hvkec30vlv99v8@ds051595.mlab.com:51595/heroku_wgm3zdxc", { useNewUrlParser: true });
+.connect("mongodb://heroku_vh4g6z2z:ag71nkrrbijsd9fnqcogam2slm@ds211268.mlab.com:11268/heroku_vh4g6z2z", { useNewUrlParser: true });
 
 
 //Routes
