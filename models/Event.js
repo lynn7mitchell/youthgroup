@@ -7,6 +7,10 @@ var EventSchema = new Schema({
         required: true,
         default: Date.now()
     },
+    title:{
+        type: String,
+        required: true
+    },
     creator:{
         type: String,
         required: true
