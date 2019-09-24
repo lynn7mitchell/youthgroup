@@ -34,6 +34,7 @@ mongoose
 
 //Routes
 require("./routes/api/albums")(app)
+require("./routes/api/events")(app)
 
 if (process.env.NODE_ENV === 'production') {
   // set static folder
