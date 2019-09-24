@@ -11,7 +11,7 @@ export default {
   },
   // Saves a EVENTS to the database
   saveEvent: function(eventData) {
-    return axios.post("/api/events", eventDate);
+    return axios.post("/api/events", eventData);
   },
   //Updates Events
   updateEvent: function(eventData){
