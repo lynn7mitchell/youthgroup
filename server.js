@@ -2,7 +2,8 @@ var express = require("express");
 var path = require("path")
 var mongoose = require("mongoose");
 const axios = require("axios")
-
+const path = require('path')
+require('dotenv').config()
 // Initialize Express
 var app = express();
 var PORT = process.env.PORT || 3001;
@@ -26,6 +27,12 @@ app.use(express.json());
 // Make public a static folder
 app.use(express.static("public"));
 
+
+// passport middleware
+app.use(passport.initialize());
+
+// passport config
+require ('./config/passport')(passport)
 
 // Connect to the Mongo DB
 mongoose
