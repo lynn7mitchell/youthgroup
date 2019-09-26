@@ -2,7 +2,7 @@ var express = require("express");
 var path = require("path")
 var mongoose = require("mongoose");
 const axios = require("axios")
-const path = require('path')
+const passport = require('passport')
 require('dotenv').config()
 // Initialize Express
 var app = express();
@@ -42,6 +42,7 @@ mongoose
 //Routes
 require("./routes/api/albums")(app)
 require("./routes/api/events")(app)
+require("./routes/api/users")(app)
 
 if (process.env.NODE_ENV === 'production') {
   // set static folder
