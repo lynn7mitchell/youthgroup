@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import API from "../utils/API"
-import AddEvent from '../components/CreateEvent';
+import EventCard from '../components/basic/EventCard'
 
 export class Events extends Component {
     state={
@@ -20,7 +20,7 @@ export class Events extends Component {
     render() {
         return (
             <div>
-                <h1>Events</h1>
+                <EventCard/>
             </div>
         )
     }
