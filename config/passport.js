@@ -13,6 +13,7 @@ module.exports = passport => {
         new JwtStrategy(opts, (jwtPayload, done) => {
             db.User.find({ id: jwtPayload })
                 .then(user => {
+                    console.log(user)
                     if (user) {
                         return done(null, user);
                     }
