@@ -121,12 +121,16 @@ module.exports = function (app) {
     // PUT
 
     app.put('/api/user', passport.authenticate('jwt', { session: false }), (req, res) => {
-        console.log(req.user)
-        // db.User.findOne({id: req.user})
-        // .then( 
-        //     console.log(req.user)
-        //     )
-        // .catch(err => console.log(err))
+        console.log(req.body.firstName)
+        db.User.findByIdAndUpdate(req.user.id, {$set:req.body})
+        .then(user => {
+            res.status(200).json({
+                message: "User account successfully created.",
+                userCreated: true
+            })
+        })
+        .catch(err => console.log(err))
+        
     });
 
 
