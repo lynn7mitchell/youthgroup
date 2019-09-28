@@ -18,7 +18,7 @@ module.exports = function (app) {
 
     //Create new user POST ROUTE
 
-    app.post('/api/users', (req, res) => {
+    app.post('/api/user', (req, res) => {
         db.User.findOne({ email: req.body.email })
             .then(user => {
                 if (user) {
@@ -66,7 +66,7 @@ module.exports = function (app) {
 
     // LOGIN
 
-    app.post('/api/users/login', (req, res) => {
+    app.post('/api/user/login', (req, res) => {
         const { email, password } = req.body;
 
         db.User.findOne({ email: email })
@@ -114,4 +114,24 @@ module.exports = function (app) {
 
   
     })
+
+
+
+
+    // PUT
+
+    app.put('/api/user/', passport.authenticate('jwt', { session: false }), (req, res) => {
+        console.log(req.user)
+        // db.User.findOne({id: req.user})
+        // .then( 
+        //     console.log(req.user)
+        //     )
+        // .catch(err => console.log(err))
+    });
+
+
+
+
+
+    // end
 }
