@@ -120,7 +120,7 @@ module.exports = function (app) {
 
     // PUT
 
-    app.put('/api/user/', passport.authenticate('jwt', { session: false }), (req, res) => {
+    app.put('/api/user', passport.authenticate('jwt', { session: false }), (req, res) => {
         console.log(req.user)
         // db.User.findOne({id: req.user})
         // .then( 

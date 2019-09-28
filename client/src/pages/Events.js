@@ -20,7 +20,7 @@ export class Events extends Component {
     render() {
         return (
             <div>
-                <EventCard/>
+                <EventCard events={this.state.events}/>
             </div>
         )
     }
