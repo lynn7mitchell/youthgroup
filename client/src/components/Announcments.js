@@ -2,9 +2,9 @@ import React, { Component } from 'react'
 
 export class Announcments extends Component {
     render() {
-        state={
-            announcments=[]
-        }
+        // state={
+        //     announcments=[]
+        // }
 
         //Render announcements from the database using .map
 
