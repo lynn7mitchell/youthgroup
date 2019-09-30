@@ -1,10 +1,11 @@
-import React, { Component } from 'react'
-import { BrowserRouter as Router, Route, Switch} from "react-router-dom"
-import Events from './pages/Events'
-import Navbar from "./components/basic/Navbar"
-import Login from "./pages/Login"
-import Home from './pages/Home'
-import NoMatch from './pages/NoMatch'
+import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import PrivateRoute from './utils/PrivateRoute';
+import Events from './pages/Events';
+import Navbar from "./components/basic/Navbar";
+import Login from "./pages/Login";
+import Home from './pages/Home';
+import NoMatch from './pages/NoMatch';
 
 export class App extends Component {
 
@@ -17,7 +18,7 @@ export class App extends Component {
         <Router>
           <Switch>
             <Route exact path="/" component={Login}/>
-            <Route exact path="/home" component={Home}/>
+            <PrivateRoute exact path="/home" component={Home}/>
             <Route exact component={NoMatch}/>
           </Switch>
         </Router>

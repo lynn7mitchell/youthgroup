@@ -13,6 +13,19 @@ module.exports = function (app) {
         });
     });
 
+    // GET ROUTE
+
+    app.get('/api/user', passport.authenticate('jwt', {session: false}), (req, res)=>{
+
+        db.User.findById(req.user.id)
+        .then(user =>{
+            if(user){
+                res.status(200).json(user)
+            }
+        })
+        .catch(err => console.log(err))
+
+    })
 
 
 
