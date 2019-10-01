@@ -81,9 +81,10 @@ module.exports = function (app) {
 
     app.post('/api/user/login', (req, res) => {
         const { email, password } = req.body;
-
+        console.log(email)
         db.User.findOne({ email: email })
             .then(user => {
+                console.log("********************",user)
                 if (!user) {
                     return res.status(404).json({ user: "User not found" })
                 }
@@ -92,8 +93,10 @@ module.exports = function (app) {
                 bcrypt.compare(password, user.password)
                     .then(isMatch => {
                         if (isMatch) {
-                            db.User.findOne({ id: user.__id })
+                            console.log("bycrypt user", user._id)
+                            db.User.findById(user._id)
                                 .then(user => {
+                                    console.log("###############", user)
                                     const payload = {
                                         id: user.id,
                                         email: user.email,

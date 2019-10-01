@@ -33,8 +33,7 @@ var UserSchema = new Schema({
         type: String
     },
     age:{
-        type: Number,
-        required: true
+        type: Number
     },
     grade:{
         type: Number,

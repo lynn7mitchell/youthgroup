@@ -40,6 +40,8 @@ export class Login extends Component {
             password: this.state.password
         }
 
+        console.log("new user", newUser)
+
         axios.post("/api/user/login", newUser)
         .then(response =>{
 
@@ -117,6 +119,9 @@ export class Login extends Component {
                   Submit
                   <i className="material-icons right">send</i>
                 </button>
+              </div>
+              <div className="row">
+                <p>Don't have an account? <a href="/SignUp">Click here to sign up!</a></p>
               </div>
             </form>
           </div>
