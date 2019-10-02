@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import './App.css';
 import PrivateRoute from './utils/PrivateRoute';
 import Events from './pages/Events';
 import Navbar from "./components/basic/Navbar";
@@ -17,11 +18,13 @@ export class App extends Component {
     
     return (
       <div>
+      <Navbar/>
         <Router>
           <Switch>
             <Route exact path="/" component={Login}/>
             <Route exact path="/SignUp" component={SignUp}/>
             <PrivateRoute exact path="/home" component={Home}/>
+            <PrivateRoute exact path="/events" component={Events}/>
             <PrivateRoute exact path="/createevent" component={CreateEvent}/>
             <Route exact component={NoMatch}/>
           </Switch>

@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 import axios from "axios";
-import { Redirect } from "react-router-dom";
 import setAuthToken from "../../utils/setAuthtoken";
+import MenuOpen from "../../images/menu-open.svg"
 export class Navbar extends Component {
 
   state = {
-      redirect: false,
-      user: {}
-    };
-  
+    redirect: false,
+    user: {}
+  };
+
   componentDidMount() {
     const token = localStorage.getItem("example-app");
 
@@ -27,62 +27,39 @@ export class Navbar extends Component {
   }
 
   render() {
-    const style={
-      nav:{
-          background: "#333",
-          display: 'none'
+    const style = {
+      menu:{
+        marginLeft: "10px",
+        marginTop: "5%",
+        width: "3vh"
       },
-      center:{
+      center: {
         display: "flex"
       },
-      navMainIcon:{
+      navMainIcon: {
         color: "#333",
         margin: "0 auto",
       },
-      welcome:{
-        marginLeft:"25px",
+      welcome: {
+        marginLeft: "25px",
       }
-  }
+    }
 
-  
+
     return (
       <div>
-        <a href="#" data-target="mobile-demo" class="sidenav-trigger">
-              <i className="material-icons">menu</i>
-            </a>
-        <nav style={style.nav}>
-          <div class="nav-wrapper">
-            <a href="#!" class="brand-logo">
-              Logo
-            </a>
-            <a href="#" data-target="mobile-demo" class="sidenav-trigger">
-              <i class="material-icons">menu</i>
-            </a>
-            <ul class="right hide-on-med-and-down">
-              <li>
-                <a href="/home">Home</a>
-              </li>
-              <li>
-                <a href="/events">Events</a>
-              </li>
-              <li>
-                <a href="/gallery">Gallery</a>
-              </li>
-              <li>
-                <a onClick={this.handleLogout}>Log Out</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
+        <a href="#" data-target="mobile-demo" className="sidenav-trigger">
+          <img src={MenuOpen} alt="menu-open-toggle" style={style.menu}/>
+        </a>
 
-        <ul class="sidenav" id="mobile-demo">
+        <ul className="sidenav" id="mobile-demo">
           <li style={style.center}>
-           <i className="material-icons large" style={style.navMainIcon}>account_circle</i>
+            <i className="material-icons large" style={style.navMainIcon}>account_circle</i>
           </li>
           <li>
-           <h6 style={style.welcome}> <strong>Welcome, {this.state.user.firstName}</strong> </h6>
+            <h6 style={style.welcome}> <strong>Welcome, {this.state.user.firstName}</strong> </h6>
           </li>
-          <hr/>
+          <hr />
           <li>
             <a href="/home">Home</a>
           </li>

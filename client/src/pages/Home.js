@@ -1,11 +1,10 @@
 import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
 import Logo from "../images/logo.svg";
-import Navbar from '../components/basic/Navbar'
 import axios from "axios";
 import setAuthToken from "../utils/setAuthtoken";
-import Moment from "react-moment";
-
+import Navbar from '../components/basic/Navbar'
+import Tabs from '../components/basic/Tabs'
 export class Home extends Component {
   state = {
     redirect: false,
@@ -44,7 +43,7 @@ export class Home extends Component {
         logo:{
             display: "block",
             margin: "0 auto",
-            width: "15vw"
+            width: "50vw"
 
         },
     }
@@ -55,18 +54,9 @@ export class Home extends Component {
     }
     return (
       <div>
-        <Navbar/>
         <img src={Logo} style={styles.logo} />
-        <p>You have successfully authenticated</p>
-
-        <p>Welcome, {user.firstName}</p>
-
-        <a
-          className="waves-effect waves-light btn red"
-          onClick={this.handleLogout}
-        >
-          button
-        </a>
+        <Tabs/>
+       
       </div>
     );
   }
