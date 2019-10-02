@@ -3,20 +3,20 @@ const Schema = mongoose.Schema;
 
 var AlbumSchema = new Schema({
     title:{
-        type: String,
-        required: true
-        
+        type: String
     },
     date:{
         type: Date,
         default: Date.now
     },
     thumbnail:{
-
+        data: Buffer,
+        type: String
     },
     images:[
         {
-        // image: buffer
+        data: Buffer,
+        type: String
     }
    ],
    creator:{

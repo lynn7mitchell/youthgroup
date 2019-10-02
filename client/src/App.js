@@ -7,6 +7,7 @@ import Login from "./pages/Login";
 import Home from './pages/Home';
 import NoMatch from './pages/NoMatch';
 import SignUp from './pages/SignUp'
+import CreateEvent from './components/CreateEvent'
 
 export class App extends Component {
 
@@ -21,6 +22,7 @@ export class App extends Component {
             <Route exact path="/" component={Login}/>
             <Route exact path="/SignUp" component={SignUp}/>
             <PrivateRoute exact path="/home" component={Home}/>
+            <PrivateRoute exact path="/createevent" component={CreateEvent}/>
             <Route exact component={NoMatch}/>
           </Switch>
         </Router>
