@@ -29,17 +29,27 @@ export class Navbar extends Component {
   render() {
     const style={
       nav:{
-          background: "#333"
+          background: "#333",
+          display: 'none'
+      },
+      center:{
+        display: "flex"
       },
       navMainIcon:{
         color: "#333",
-        textAlign: "center"
+        margin: "0 auto",
+      },
+      welcome:{
+        marginLeft:"25px",
       }
   }
 
   
     return (
       <div>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+              <i className="material-icons">menu</i>
+            </a>
         <nav style={style.nav}>
           <div class="nav-wrapper">
             <a href="#!" class="brand-logo">
@@ -66,11 +76,11 @@ export class Navbar extends Component {
         </nav>
 
         <ul class="sidenav" id="mobile-demo">
-          <li>
+          <li style={style.center}>
            <i className="material-icons large" style={style.navMainIcon}>account_circle</i>
           </li>
           <li>
-           <h6> <strong>Welcome, {this.state.user.firstName}</strong> </h6>
+           <h6 style={style.welcome}> <strong>Welcome, {this.state.user.firstName}</strong> </h6>
           </li>
           <hr/>
           <li>

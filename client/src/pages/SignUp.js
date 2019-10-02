@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Logo from "../images/412-Logo-copy.png";
+import Logo from "../images/logo.svg";
 import axios from "axios";
 
 export class SignUp extends Component {
@@ -42,7 +42,9 @@ export class SignUp extends Component {
       logo: {
         display: "block",
         margin: "0 auto",
-        paddingBottom: "15px"
+        paddingBottom: "15px",
+        width: "28vw"
+
       }
     };
     return (

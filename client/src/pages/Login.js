@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Redirect } from 'react-router-dom'
 import axios from 'axios'
-import Logo from "../images/412-Logo-copy.png";
+import Logo from "../images/logo.svg";
 import authenticate from "../utils/Authenticate";
 import setAuthToken from "../utils/setAuthtoken";
 
@@ -67,7 +67,8 @@ export class Login extends Component {
     const styles = {
         logo:{
             display: "block",
-            margin: "0 auto"
+            margin: "0 auto",
+            width: "28vw"
         },
         error:{
           color: "#cc0000",

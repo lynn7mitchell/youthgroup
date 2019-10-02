@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
+import Logo from "../images/logo.svg";
 import Navbar from '../components/basic/Navbar'
 import axios from "axios";
 import setAuthToken from "../utils/setAuthtoken";
@@ -39,7 +40,14 @@ export class Home extends Component {
 
   render() {
 
-    
+    const styles={
+        logo:{
+            display: "block",
+            margin: "0 auto",
+            width: "15vw"
+
+        },
+    }
     const { redirect, user } = this.state;
 
     if (redirect) {
@@ -48,6 +56,7 @@ export class Home extends Component {
     return (
       <div>
         <Navbar/>
+        <img src={Logo} style={styles.logo} />
         <p>You have successfully authenticated</p>
 
         <p>Welcome, {user.firstName}</p>
