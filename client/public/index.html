@@ -43,7 +43,10 @@
     <script>
         $(document).ready(function(){
     $('.sidenav').sidenav();
-    $('.datepicker').datepicker();
+    $('.datepicker').datepicker({
+      format: 'mm/dd/yyyy'
+      
+    });
     $('.timepicker').timepicker();
     $('.tabs').tabs();
 

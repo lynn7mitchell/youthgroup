@@ -2,10 +2,8 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 var EventSchema = new Schema({
-    created_at:{
-        type: Date,
-        required: true,
-        default: Date.now()
+    date:{
+        type: Date
     },
     title:{
         type: String,
