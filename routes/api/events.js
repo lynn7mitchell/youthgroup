@@ -40,6 +40,7 @@ module.exports = function(app) {
   app.post("/api/events", (req, res) => {
     console.log("events post route");
     const event = {
+      date: req.body.date,
       title: req.body.title,
       creator: req.body.creator,
       attending: req.body.attending,
@@ -64,6 +65,7 @@ module.exports = function(app) {
     console.log("events put route");
     const event = {
       title: req.body.title,
+      date: req.body.date,
       creator: req.body.creator,
       attending: req.body.attending,
       locationName: req.body.locationName,

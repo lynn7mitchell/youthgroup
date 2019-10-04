@@ -16,13 +16,28 @@ export class Events extends Component {
 
     // Render Events from the database using .map
     
-    
+//     //  state={
+//     events:{}
+// }
+
+// componentDidMount(){
+//   axios.get('/api/events')
+//   .then(response =>{
+//     this.setState({
+//       events: response.data
+//     })
+//   })
+//   .catch(err => console.log(err))
+// }
+
     render() {
         return (
             <div>
                 <h3 className="subheader">Events</h3>
                 <EventCard events={this.state.events}/>
                 <a href="/createevent"><i className="material-icons small add-event-icon">add_circle_outline</i></a>
+
+
             </div>
         )
     }
