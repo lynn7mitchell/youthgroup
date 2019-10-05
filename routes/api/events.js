@@ -47,7 +47,7 @@ module.exports = function(app) {
       locationName: req.body.locationName,
       locationAddress: req.body.locationAddress,
       time: req.body.time,
-      notes: req.body.notes
+      note: req.body.note
     };
     db.Event.create(event)
       .then(() => {

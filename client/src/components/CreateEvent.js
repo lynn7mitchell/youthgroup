@@ -36,7 +36,6 @@ export class CreateEvent extends Component {
     this.setState({
       [e.target.name]: e.target.value
     });
-    console.log(document.getElementsByClassName("year-text"));
   };
 
   onDateChange = date => {
