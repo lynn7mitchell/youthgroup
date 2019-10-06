@@ -35,7 +35,7 @@ export class Events extends Component {
             <div>
                 <h3 className="subheader">Events</h3>
                 <EventCard events={this.state.events}/>
-                <a href="/createevent"><i className="material-icons small add-event-icon">add_circle_outline</i></a>
+                <Link to="/createevent"><i className="material-icons small add-event-icon">add_circle_outline</i></Link>
 
 
             </div>

@@ -10,13 +10,13 @@ import NoMatch from "./pages/NoMatch";
 import SignUp from "./pages/SignUp";
 import CreateEvent from "./components/CreateEvent";
 import CreateAnnouncement from "./components/CreateAnnouncement";
+import AdminSwitch from "./components/basic/AdminSwitch";
 
 export class App extends Component {
   render() {
     return (
       <div>
         <Navbar />
-
         <Router>
           <Switch>
             <Route exact path="/" component={Login} />
@@ -33,6 +33,8 @@ export class App extends Component {
             <Route exact component={NoMatch} />
           </Switch>
         </Router>
+        <AdminSwitch/>
+
       </div>
     );
   }

@@ -13,6 +13,12 @@ export class AdminSwitch extends Component {
       styles = {
         display: "none"
       };
+    
+    }
+    styles={
+        position: "absolute",
+        bottom: 0,
+        right: 0,
     }
    
     return (

@@ -68,12 +68,11 @@ export class Home extends Component {
         
         <img src={Logo} style={styles.logo} />
         <Tabs />
-        <a href="/createannouncement">
+        <Link to="/createannouncement">
           <i className="material-icons small add-event-icon">
             add_circle_outline
           </i>
-        </a>
-        <a onClick={this.handleLogout}>Log Out</a>
+        </Link>
 
       </div>
     );
