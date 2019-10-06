@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Redirect } from "react-router-dom";
+import { Redirect, Link } from "react-router-dom";
 import Logo from "../images/logo.svg";
 import axios from "axios";
 import setAuthToken from "../utils/setAuthtoken";
