@@ -4,7 +4,7 @@ import Logo from "../images/logo.svg";
 import axios from "axios";
 import setAuthToken from "../utils/setAuthtoken";
 import Tabs from "../components/basic/Tabs";
-import Navbar from "../components/basic/Navbar"
+import Navbar from "../components/basic/Navbar";
 export class Home extends Component {
   state = {
     redirect: false,
@@ -34,7 +34,6 @@ export class Home extends Component {
       .catch(err => console.log(err.response));
   }
 
-
   // handleLogout = () => {
   //   localStorage.removeItem("example-app");
   //   this.setState({
@@ -61,11 +60,11 @@ export class Home extends Component {
     // if (redirect) {
     //   return <Redirect to="/" />;
     // }
-    
-    return (
 
+    return (
       <div>
-        
+        <Navbar />
+
         <img src={Logo} style={styles.logo} />
         <Tabs />
         <a href="/createannouncement">
@@ -73,8 +72,6 @@ export class Home extends Component {
             add_circle_outline
           </i>
         </a>
-        <a onClick={this.handleLogout}>Log Out</a>
-
       </div>
     );
   }

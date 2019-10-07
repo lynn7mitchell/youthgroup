@@ -3,6 +3,7 @@ import axios from 'axios'
 import setAuthToken from "../utils/setAuthtoken";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import Navbar from "./basic/Navbar"
 import { getTime } from "date-fns/esm";
 
 export class CreateEvent extends Component {
@@ -70,6 +71,8 @@ export class CreateEvent extends Component {
   render() {
     return (
       <div>
+                <Navbar />
+
         <h3 className="subheader">Create an Event</h3>
 
         <div className="container">

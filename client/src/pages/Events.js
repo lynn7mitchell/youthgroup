@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import API from "../utils/API"
 import EventCard from '../components/basic/EventCard'
+import Navbar from "../components/basic/Navbar"
 
 export class Events extends Component {
     state={
@@ -33,6 +34,8 @@ export class Events extends Component {
     render() {
         return (
             <div>
+                        <Navbar />
+
                 <h3 className="subheader">Events</h3>
                 <EventCard events={this.state.events}/>
                 <a href="/createevent"><i className="material-icons small add-event-icon">add_circle_outline</i></a>

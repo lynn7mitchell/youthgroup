@@ -1,34 +1,37 @@
 import React, { Component } from "react";
-import axios from "axios"
+import Navbar from "./basic/Navbar"
+import axios from "axios";
 
 export class CreateAnnouncement extends Component {
-    state={
-        title: "",
-        info: ""
-    }
+  state = {
+    title: "",
+    info: ""
+  };
 
-    onChange = e => {
-        this.setState({
-          [e.target.name]: e.target.value
-        });
-      };
+  onChange = e => {
+    this.setState({
+      [e.target.name]: e.target.value
+    });
+  };
 
-      onSubmit = e =>{
-        e.preventDefault();
-    
-        const newAnnouncement = {
-          title: this.state.title,
-          info: this.state.info
-        }
-    
-        axios.post('api/announcements', newAnnouncement)
-        .then(console.log(newAnnouncement))
-        .catch(err => console.log(err))
-    
-      }
+  onSubmit = e => {
+    e.preventDefault();
+
+    const newAnnouncement = {
+      title: this.state.title,
+      info: this.state.info
+    };
+
+    axios
+      .post("api/announcements", newAnnouncement)
+      .then(console.log(newAnnouncement))
+      .catch(err => console.log(err));
+  };
   render() {
     return (
       <div>
+        <Navbar />
+
         <h3 className="subheader">Create an Event</h3>
 
         <div className="container">
@@ -47,15 +50,15 @@ export class CreateAnnouncement extends Component {
               </div>
             </div>
             <div className=" input-field col s12">
-                <textarea
-                  onChange={this.onChange}
-                  value={this.state.info}
-                  name="info"
-                  id="info"
-                  className="materialize-textarea"
-                ></textarea>
-                <label htmlFor="info">Info</label>
-              </div>
+              <textarea
+                onChange={this.onChange}
+                value={this.state.info}
+                name="info"
+                id="info"
+                className="materialize-textarea"
+              ></textarea>
+              <label htmlFor="info">Info</label>
+            </div>
             <div className="row">
               <button
                 className="btn waves-effect waves-light"
