@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { Link } from "react-router-dom"
 import API from "../utils/API"
 import EventCard from '../components/basic/EventCard'
 
@@ -36,7 +35,7 @@ export class Events extends Component {
             <div>
                 <h3 className="subheader">Events</h3>
                 <EventCard events={this.state.events}/>
-                <Link to="/createevent"><i className="material-icons small add-event-icon">add_circle_outline</i></Link>
+                <a href="/createevent"><i className="material-icons small add-event-icon">add_circle_outline</i></a>
 
 
             </div>

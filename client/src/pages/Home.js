@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Redirect, Link } from "react-router-dom";
+import { Redirect } from "react-router-dom";
 import Logo from "../images/logo.svg";
 import axios from "axios";
 import setAuthToken from "../utils/setAuthtoken";
@@ -68,11 +68,12 @@ export class Home extends Component {
         
         <img src={Logo} style={styles.logo} />
         <Tabs />
-        <Link to="/createannouncement">
+        <a href="/createannouncement">
           <i className="material-icons small add-event-icon">
             add_circle_outline
           </i>
-        </Link>
+        </a>
+        <a onClick={this.handleLogout}>Log Out</a>
 
       </div>
     );

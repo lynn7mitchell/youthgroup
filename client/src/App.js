@@ -20,7 +20,6 @@ export class App extends Component {
         <Router>
           <Switch>
             <Route exact path="/" component={Login} />
-            <Route exact path="/login" component={Login} />
             <Route exact path="/SignUp" component={SignUp} />
             <PrivateRoute exact path="/home" component={Home} />
             <PrivateRoute exact path="/events" component={Events} />
@@ -33,7 +32,6 @@ export class App extends Component {
             <Route exact component={NoMatch} />
           </Switch>
         </Router>
-        <AdminSwitch/>
 
       </div>
     );
