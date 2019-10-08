@@ -1,9 +1,11 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Link, Redirect, } from "react-router-dom";
+import { BrowserRouter as Router, Link, Redirect } from "react-router-dom";
 import axios from "axios";
 import setAuthToken from "../../utils/setAuthtoken";
 import MenuOpen from "../../images/menu-open.svg";
-import AdminSwitch from "./AdminSwitch"
+import {SideNav, SideNavItem, Button} from "react-materialize";
+import AdminSwitch from "./AdminSwitch";
+// import Button from "./Button"
 export class Navbar extends Component {
   state = {
     redirect: false,
@@ -24,10 +26,10 @@ export class Navbar extends Component {
         this.setState({
           user: response.data
         });
-        if(this.state.user.role === "admin"){
+        if (this.state.user.role === "admin") {
           this.setState({
             isAdmin: true
-          })
+          });
         }
       })
       .catch(err => console.log(err.response));
@@ -55,6 +57,12 @@ export class Navbar extends Component {
       },
       welcome: {
         marginLeft: "25px"
+      },
+      button:{
+             marginLeft: "10px",
+              marginTop: "5%",
+              width: "3vh",
+              backgroundImage: MenuOpen
       }
     };
     const { redirect, user } = this.state;
@@ -68,47 +76,42 @@ export class Navbar extends Component {
     //     return <AdminSwitch isAdmin = {this.state.isAdmin}/>
     //   }
     // }
-    
+
     return (
       <div>
-        <a href="#" data-target="mobile-demo" className="sidenav-trigger">
-          <img src={MenuOpen} alt="menu-open-toggle" style={style.menu} />
-        </a>
+        <SideNav trigger={<Button style={style.button} />} options={{closeOnClick: true}}>
 
-        <ul className="sidenav" id="mobile-demo">
-          <li style={style.center}>
+        {/* <a href="#" data-target="mobile-demo" className="sidenav-trigger">
+          <img src={MenuOpen} alt="menu-open-toggle" style={style.menu} />
+        </a> */}
+
+          <SideNavItem style={style.center}>
             <i className="material-icons large" style={style.navMainIcon}>
               account_circle
             </i>
-          </li>
-          <li>
+          </SideNavItem>
+          <SideNavItem >
             <h6 style={style.welcome}>
               {" "}
               <strong>Welcome, {this.state.user.firstName}</strong>{" "}
             </h6>
-          </li>
+          </SideNavItem>
           <hr />
-          <li>
-            <Link to="/home">Home</Link>
-          </li>
-          <li>
-            <Link to="/events">Events</Link>
-          </li>
-          <li>
-            <Link to="/gallery">Gallery</Link>
-          </li>
-          <li>
+          <SideNavItem href="/home">
+            Home
+          </SideNavItem>
+          <SideNavItem href="/events">
+            Events
+          </SideNavItem>
+          <SideNavItem>
             <Link onClick={this.handleLogout}>Log Out</Link>
-          </li>
+          </SideNavItem>
           {/* {adminSwitch()} */}
 
-        </ul>
-
         <div>
-          <div>
-          </div>
+          <div></div>
         </div>
-        
+        </SideNav>
       </div>
     );
   }
