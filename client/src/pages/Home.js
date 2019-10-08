@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Redirect } from "react-router-dom";
+import { BrowserRouter as Router, Redirect, Link } from "react-router-dom";
 import Logo from "../images/logo.svg";
 import axios from "axios";
 import setAuthToken from "../utils/setAuthtoken";
@@ -67,11 +67,13 @@ export class Home extends Component {
 
         <img src={Logo} style={styles.logo} />
         <Tabs />
-        <a href="/createannouncement">
+        <Router>
+        <Link to="/createannouncement">
           <i className="material-icons small add-event-icon">
             add_circle_outline
           </i>
-        </a>
+        </Link>
+        </Router>
       </div>
     );
   }
