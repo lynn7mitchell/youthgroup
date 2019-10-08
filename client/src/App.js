@@ -10,6 +10,7 @@ import NoMatch from "./pages/NoMatch";
 import SignUp from "./pages/SignUp";
 import CreateEvent from "./components/CreateEvent";
 import CreateAnnouncement from "./components/CreateAnnouncement";
+
 import AdminSwitch from "./components/basic/AdminSwitch";
 
 export class App extends Component {
@@ -20,6 +21,8 @@ export class App extends Component {
           <Switch>
             <Route exact path="/" component={Login} />
             <Route exact path="/SignUp" component={SignUp} />
+            <PrivateRoute exact path="/Navbar" component={Navbar} />
+
             <PrivateRoute exact path="/home" component={Home} />
             <PrivateRoute exact path="/events" component={Events} />
             <PrivateRoute exact path="/createevent" component={CreateEvent} />

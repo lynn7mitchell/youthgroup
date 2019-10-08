@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Redirect, } from "react-router-dom";
+import { BrowserRouter as Router, Link, Redirect, } from "react-router-dom";
 import axios from "axios";
 import setAuthToken from "../../utils/setAuthtoken";
 import MenuOpen from "../../images/menu-open.svg";
@@ -89,16 +89,16 @@ export class Navbar extends Component {
           </li>
           <hr />
           <li>
-            <a href="/home">Home</a>
+            <Link to="/home">Home</Link>
           </li>
           <li>
-            <a href="/events">Events</a>
+            <Link to="/events">Events</Link>
           </li>
           <li>
-            <a href="/gallery">Gallery</a>
+            <Link to="/gallery">Gallery</Link>
           </li>
           <li>
-            <a onClick={this.handleLogout}>Log Out</a>
+            <Link onClick={this.handleLogout}>Log Out</Link>
           </li>
           {/* {adminSwitch()} */}
 
@@ -108,6 +108,7 @@ export class Navbar extends Component {
           <div>
           </div>
         </div>
+        
       </div>
     );
   }

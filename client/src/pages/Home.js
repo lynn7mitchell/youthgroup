@@ -62,18 +62,18 @@ export class Home extends Component {
     // }
 
     return (
-      <div>
+      <div>       
+
+
         <Navbar />
 
         <img src={Logo} style={styles.logo} />
         <Tabs />
-        <Router>
         <Link to="/createannouncement">
           <i className="material-icons small add-event-icon">
             add_circle_outline
           </i>
         </Link>
-        </Router>
       </div>
     );
   }
