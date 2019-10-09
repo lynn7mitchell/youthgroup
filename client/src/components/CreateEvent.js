@@ -64,7 +64,9 @@ export class CreateEvent extends Component {
     }
 
     axios.post('api/events', newEvent)
-    .then(console.log(newEvent))
+    .then(
+      alert("Event Created!")
+    )
     .catch(err => console.log(err))
 
   }
