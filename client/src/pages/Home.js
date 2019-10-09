@@ -53,8 +53,17 @@ export class Home extends Component {
         display: "block",
         margin: "0 auto",
         width: "50vw"
+      },
+      addAnnouncement:{
+        
       }
     };
+
+    if(!this.state.isAdmin){
+      styles.addAnnouncement = {
+        display: "none"
+      }
+    }
     // const { redirect, user } = this.state;
 
     // if (redirect) {
@@ -70,7 +79,7 @@ export class Home extends Component {
         <img src={Logo} style={styles.logo} />
         <Tabs />
         <Link to="/createannouncement">
-          <i className="material-icons small add-event-icon">
+          <i className="material-icons small add-event-icon" style={styles.addAnnouncement}>
             add_circle_outline
           </i>
         </Link>
