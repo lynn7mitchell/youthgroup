@@ -40,7 +40,7 @@ export class Login extends Component {
             password: this.state.password
         }
 
-        console.log("new user", newUser)
+      
 
         axios.post("/api/user/login", newUser)
         .then(response =>{
@@ -55,7 +55,6 @@ export class Login extends Component {
             redirect: true,
             errors: {}
           })
-            console.log(response.data)
         })
         .catch(err => 
                 this.setState({
@@ -68,13 +67,18 @@ export class Login extends Component {
         logo:{
             display: "block",
             margin: "0 auto",
-            width: "28vw"
+            width: "28vw",
+           
         },
+        
+        
         error:{
           color: "#cc0000",
           fontSize: "0.8rem",
           margin: 0
         }
+
+        
     };
 
     const {errors} = this.state;

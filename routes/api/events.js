@@ -86,7 +86,7 @@ module.exports = function(app) {
 
 // Test works in postman
   app.delete("/api/events/:id", (req, res) => {
-    db.Event.findOneAndDelete({ title: req.params.id })
+    db.Event.findOneAndDelete({ _id: req.params.id })
       .then(() => {
         res.json({
           success: true

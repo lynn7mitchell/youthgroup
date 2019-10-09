@@ -13,11 +13,7 @@ export class Home extends Component {
   };
 
   componentDidMount() {
-    // const token = localStorage.getItem("example-app");
-
-    // if (token) {
-    //   setAuthToken(token);
-    // }
+   
 
     axios
       .get("api/user")
@@ -34,19 +30,10 @@ export class Home extends Component {
       .catch(err => console.log(err.response));
   }
 
-  // handleLogout = () => {
-  //   localStorage.removeItem("example-app");
-  //   this.setState({
-  //     redirect: true
-  //   });
-  // };
+
 
   render() {
-    // if (checkbox.checked) {
-    //   isAdmin === true;
-    // } else if (!checkbox.checkbox) {
-    //   isAdmin === false;
-    // }
+    
 
     const styles = {
       logo: {
@@ -64,11 +51,7 @@ export class Home extends Component {
         display: "none"
       }
     }
-    // const { redirect, user } = this.state;
-
-    // if (redirect) {
-    //   return <Redirect to="/" />;
-    // }
+    
 
     return (
       <div>       

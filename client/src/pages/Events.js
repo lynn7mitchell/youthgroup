@@ -4,15 +4,7 @@ import EventCard from '../components/basic/EventCard'
 import Navbar from "../components/basic/Navbar"
 
 export class Events extends Component {
-    state={
-        events: []
-    }
-
-    componentDidMount(){
-        API.getEvents()
-        .then(res => this.setState({events: res.data}))
-        .catch(err => console.log(err.data))
-    }
+    
     // Route to the add CreateEvent component (button)
 
     // Render Events from the database using .map
@@ -37,7 +29,7 @@ export class Events extends Component {
                         <Navbar />
 
                 <h3 className="subheader">Events</h3>
-                <EventCard events={this.state.events}/>
+                <EventCard />
                 <a href="/createevent"><i className="material-icons small add-event-icon">add_circle_outline</i></a>
 
 
