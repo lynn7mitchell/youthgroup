@@ -41,7 +41,7 @@ module.exports = function(app) {
       console.log("events post route");
       const announcement = {
        title: req.body.title,
-       info: req.body.title
+       info: req.body.info
       };
       db.Announcement.create(announcement)
         .then(() => {

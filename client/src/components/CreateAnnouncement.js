@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Redirect } from "react-router-dom"
 import Navbar from "./basic/Navbar"
 import axios from "axios";
 
@@ -24,7 +25,10 @@ export class CreateAnnouncement extends Component {
 
     axios
       .post("api/announcements", newAnnouncement)
-      .then(console.log(newAnnouncement))
+      .then(
+        alert("Announcement Posted")
+        
+        )
       .catch(err => console.log(err));
   };
   render() {
@@ -32,7 +36,7 @@ export class CreateAnnouncement extends Component {
       <div>
         <Navbar />
 
-        <h3 className="subheader">Create an Event</h3>
+        <h3 className="subheader">Create an Announcement</h3>
 
         <div className="container">
           <form className="col s12" onSubmit={this.onSubmit}>

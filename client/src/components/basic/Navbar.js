@@ -62,7 +62,10 @@ export class Navbar extends Component {
              marginLeft: "10px",
               marginTop: "5%",
               width: "3vh",
-              backgroundImage: MenuOpen
+              background: "transparent"
+      },
+      color:{
+        color: "#000"
       }
     };
     const { redirect, user } = this.state;
@@ -79,7 +82,7 @@ export class Navbar extends Component {
 
     return (
       <div>
-        <SideNav trigger={<Button style={style.button} />} options={{closeOnClick: true}}>
+        <SideNav trigger={<Button style={style.button}><i className="material-icons" style={style.color}>menu</i></Button>} options={{closeOnClick: true}}>
 
         {/* <a href="#" data-target="mobile-demo" className="sidenav-trigger">
           <img src={MenuOpen} alt="menu-open-toggle" style={style.menu} />
