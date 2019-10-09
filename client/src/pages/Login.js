@@ -75,7 +75,8 @@ export class Login extends Component {
         error:{
           color: "#cc0000",
           fontSize: "0.8rem",
-          margin: 0
+          margin: 0,
+          
         }
 
         
@@ -88,7 +89,7 @@ export class Login extends Component {
     }
     return (
       <div>
-        <img src={Logo} style={styles.logo} />
+        <img src={Logo} className="logo" style={styles.logo} />
         <div className="container">
           <div className="row">
             <form className="col s12" onSubmit={this.onSubmit}>

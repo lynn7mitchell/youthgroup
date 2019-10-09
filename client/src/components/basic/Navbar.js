@@ -49,7 +49,9 @@ export class Navbar extends Component {
         width: "3vh"
       },
       center: {
-        display: "flex"
+        display: "flex",
+        alignItems: "center",
+        justifyItems: "center"
       },
       navMainIcon: {
         color: "#333",
@@ -62,7 +64,8 @@ export class Navbar extends Component {
              marginLeft: "10px",
               marginTop: "5%",
               width: "3vh",
-              background: "transparent"
+              background: "transparent",
+              boxShadow: "none"
       },
       color:{
         color: "#000"
