@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Logo from "../images/logo.svg";
 import axios from "axios";
+import Navbar from "../components/basic/Navbar"
 
 export class SignUp extends Component {
 
@@ -49,6 +50,8 @@ export class SignUp extends Component {
     };
     return (
       <div>
+         <Navbar />
+
         <img src={Logo} style={styles.logo} />
         <div className="container">
           <div className="row">
