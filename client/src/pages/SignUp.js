@@ -44,7 +44,8 @@ export class SignUp extends Component {
         display: "block",
         margin: "0 auto",
         paddingBottom: "15px",
-        width: "28vw"
+        width: "28vw",
+        
 
       }
     };
@@ -52,7 +53,7 @@ export class SignUp extends Component {
       <div>
          <Navbar />
 
-        <img src={Logo} style={styles.logo} />
+        <img src={Logo} style={styles.logo} className="logo"/>
         <div className="container">
           <div className="row">
             <form className="col s12" onSubmit={this.onSubmit}>

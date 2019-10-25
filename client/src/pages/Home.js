@@ -59,7 +59,7 @@ export class Home extends Component {
 
         <Navbar />
 
-        <img src={Logo} style={styles.logo} />
+        <img src={Logo} style={styles.logo} className="logo" />
         <Tabs />
         <Link to="/createannouncement">
           <i className="material-icons small add-event-icon" style={styles.addAnnouncement}>

@@ -92,9 +92,7 @@ export class Navbar extends Component {
         </a> */}
 
           <SideNavItem style={style.center}>
-            <i className="material-icons large" style={style.navMainIcon}>
-              account_circle
-            </i>
+            
           </SideNavItem>
           <SideNavItem >
             <h6 style={style.welcome}>
