@@ -30,7 +30,7 @@ This app was created to help youthgroups with keeping track of events. This app 
 ![Home](./client/src/images/home.png)
 
 ## Events
-![Events](./client/src/images/events.png)
+![Events](./client/src/images/event.png)
 
 ## Event Form
 ![Event Form](./client/src/images/eventform.png)
