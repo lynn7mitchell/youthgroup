@@ -23,14 +23,14 @@ This app was created to help youthgroups with keeping track of events. This app 
 
 # Screenshots
 
-## Home
-![Home](./client/src/images/home)
-
 ## Login
-![Language Dashboard](./client/src/images/language-dashboard.png)
+![Login](./client/src/images/login.png)
 
 ## Home
-![Multiple Choice (kana)](./client/src/images/multiplechoicekana.png)
+![Home](./client/src/images/home.png)
 
 ## Events
-![Fill In The Blank](./client/src/images/fillintheblank.png)
+![Events](./client/src/images/events.png)
+
+## Event Form
+![Event Form](./client/src/images/eventform.png)
