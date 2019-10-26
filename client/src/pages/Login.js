@@ -129,6 +129,18 @@ export class Login extends Component {
               <div className="row">
                 <p>Don't have an account? <a href="/SignUp">Click here to sign up!</a></p>
               </div>
+              <div className="row">
+                <div className="col s6">
+                <p>admin login:</p>
+                <p>Email: admintest@gmail.com</p>
+                <p>Password: admintest</p>
+                </div>
+                <div className="col s6">
+                <p>student login:</p>
+                <p>Email: studenttest@gmail.com</p>
+                <p>Password: studenttest</p>
+                </div>
+              </div>
             </form>
           </div>
         </div>
