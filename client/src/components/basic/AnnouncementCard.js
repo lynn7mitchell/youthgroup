@@ -78,7 +78,7 @@ export class Announcments extends Component {
                 {this.state.announcments.map(announcement => (
                   <div>
                     <div className="row">
-                      <div className="col s12 m6">
+                      <div className="col s12 m10 offset-m1">
                         <div className="card blue-grey darken-1">
                           <div className="card-content white-text" style={style.card}>
                             <div style={style.icon}><i className="material-icons" id={announcement._id} onClick={this.onClick} style={style.iconColor}>delete</i></div>

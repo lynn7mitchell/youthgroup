@@ -1,32 +1,36 @@
-# Create React Express App
+# Youthgroup App
 
-## About This Boilerplate
+Live Link: https://youthgroup.herokuapp.com/
 
-This setup allows for a Node/Express/React app which can be easily deployed to Heroku.
+# Purpose
 
-The front-end React app will auto-reload as it's updated via webpack dev server, and the backend Express app will auto-reload independently with nodemon.
+This app was created to help youthgroups with keeping track of events. This app has an admin and student role so that the admin can add announcements. This will be updated with chat, albums, and payment for camps.
 
-## Starting the app locally
+# Built Using
 
-Start by installing front and backend dependencies. While in this directory, run the following command:
+- HTML
+- CSS
+- Materialize CSS
+- JavaScript
+- React.js
+- Node.js
+- Express.js
+- Mongo DB
+- Mongoose ODM
+- Axios
+- React-router-dom
+- Heroku
 
-```
-npm install
-```
+# Screenshots
 
-This should install node modules within the server and the client folder.
+## Home
+![Home](./client/src/images/home)
 
-After both installations complete, run the following command in your terminal:
+## Login
+![Language Dashboard](./client/src/images/language-dashboard.png)
 
-```
-npm start
-```
+## Home
+![Multiple Choice (kana)](./client/src/images/multiplechoicekana.png)
 
-Your app should now be running on <http://localhost:3000>. The Express server should intercept any AJAX requests from the client.
-
-## Deployment (Heroku)
-
-To deploy, simply add and commit your changes, and push to Heroku. As is, the NPM scripts should take care of the rest.
-# google-books-homework
-# react-notes
-# youthgroup
+## Events
+![Fill In The Blank](./client/src/images/fillintheblank.png)
