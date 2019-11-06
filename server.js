@@ -8,9 +8,7 @@ require('dotenv').config()
 var app = express();
 var PORT = process.env.PORT || 3001;
 
-// if (process.env.NODE_ENV === "production"){
-//   app.use(express.static("client/build"))
-// }
+
 
 
 
@@ -36,7 +34,7 @@ require ('./config/passport')(passport)
 
 // Connect to the Mongo DB
 mongoose
-.connect("mongodb://heroku_vh4g6z2z:ag71nkrrbijsd9fnqcogam2slm@ds211268.mlab.com:11268/heroku_vh4g6z2z", { useNewUrlParser: true });
+.connect(process.env.MONGODB_URI, { useNewUrlParser: true });
 
 
 //Routes
