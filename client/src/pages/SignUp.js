@@ -1,42 +1,38 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import Logo from "../images/logo.svg";
 import axios from "axios";
-import Navbar from "../components/basic/Navbar"
+import Navbar from "../components/basic/Navbar";
 
 export class SignUp extends Component {
+  state = {
+    firstName: "",
+    lastName: "",
+    email: "",
+    password: ""
+  };
 
+  onChange = e => {
+    this.setState({
+      [e.target.name]: e.target.value
+    });
+  };
 
+  onSubmit = e => {
+    e.preventDefault();
 
-    state={
-        firstName: "",
-        lastName: "",
-        email: "",
-        password: ""
-    }
+    const newUser = {
+      firstName: this.state.firstName,
+      lastName: this.state.lastName,
+      email: this.state.email,
+      password: this.state.password
+    };
 
-
-    onChange = e =>{
-        this.setState({
-            [e.target.name]: e.target.value
-        })
-    }
-
-
-    onSubmit = e =>{
-        e.preventDefault();
-
-        const newUser={
-            firstName: this.state.firstName,
-            lastName: this.state.lastName,
-            email: this.state.email,
-            password: this.state.password
-        }
-
-
-        axios.post('api/user', newUser)
-        .then(console.log("Thanks for signing up"))
-        .catch(err => console.log(err))
-    }
+    axios
+      .post("api/user", newUser)
+      .then(console.log("Thanks for signing up"))
+      .catch(err => console.log(err));
+  };
 
   render() {
     const styles = {
@@ -44,16 +40,20 @@ export class SignUp extends Component {
         display: "block",
         margin: "0 auto",
         paddingBottom: "15px",
-        width: "28vw",
-        
-
+        width: "28vw"
       }
     };
     return (
       <div>
-         <Navbar />
+        <Link
+          to={{
+            pathname: "/"
+          }}
+        >
+          <i className="material-icons back-button">arrow_back</i>
+        </Link>
 
-        <img src={Logo} style={styles.logo} className="logo"/>
+        <img src={Logo} style={styles.logo} className="logo" />
         <div className="container">
           <div className="row">
             <form className="col s12" onSubmit={this.onSubmit}>
@@ -76,7 +76,6 @@ export class SignUp extends Component {
                     type="text"
                     className="validate"
                     name="lastName"
-
                     onChange={this.onChange}
                   />
                   <label htmlFor="first_name">Last Name</label>
@@ -91,7 +90,6 @@ export class SignUp extends Component {
                     type="email"
                     className="validate"
                     name="email"
-
                     onChange={this.onChange}
                   />
                   <label htmlFor="email">Email</label>
@@ -106,7 +104,6 @@ export class SignUp extends Component {
                     type="password"
                     className="validate"
                     name="password"
-
                     onChange={this.onChange}
                   />
                   <label htmlFor="password">Password</label>
