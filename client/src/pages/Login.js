@@ -68,6 +68,7 @@ export class Login extends Component {
             display: "block",
             margin: "0 auto",
             width: "28vw",
+            paddingTop: "2rem"
            
         },
         
