@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from "react-router-dom";
 import API from "../utils/API"
 import EventCard from '../components/basic/EventCard'
 import Navbar from "../components/basic/Navbar"
@@ -26,7 +27,13 @@ export class Events extends Component {
     render() {
         return (
             <div>
-                        <Navbar />
+                         <Link
+          to={{
+            pathname: "/home"
+          }}
+        >
+          <i className="material-icons back-button">arrow_back</i>
+        </Link>
 
                 <h3 className="subheader">Events</h3>
                 <EventCard />
